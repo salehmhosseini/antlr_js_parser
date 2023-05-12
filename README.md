@@ -37,6 +37,8 @@
   ### some explanation
   We have two separate files . (lexer and parser) so that lexer file linked to parser file.
   this program should start with at least an import statement .
+Inline `code`
+
     program
       : sourceElements EOF
       ;
