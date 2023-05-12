@@ -37,20 +37,20 @@
   ### some explanation
   We have two separate files . (lexer and parser) so that lexer file linked to parser file.
   this program should start with at least an import statement .
-Inline `code`
+  Inline `code`
 
-    program
-      : sourceElements EOF
+      program
+        : sourceElements EOF
+        ;
+
+      sourceElements
+      : statement
       ;
 
-    sourceElements
-    : statement
-    ;
-
-    // Start the program with import statement
-    statement
-    :
-     import_statement+ statements*
-    ;
+      // Start the program with import statement
+      statement
+      :
+       import_statement+ statements*
+      ;
    
 
