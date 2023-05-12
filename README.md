@@ -72,7 +72,7 @@
         ;
 ---
 ---
-## some screenshots from structured trees
+> ## some screenshots from structured trees
 
 **Class Statement**
 ![Class](https://github.com/salehmhosseini/university_antlr_project/blob/main/screenshots/Class.png)
@@ -82,7 +82,7 @@
 ![If](https://github.com/salehmhosseini/university_antlr_project/blob/main/screenshots/If.png)
 ---
 
-**Try - Catch Statement**
+**Try-Catch Statement**
 ![Try_Catch](https://github.com/salehmhosseini/university_antlr_project/blob/main/screenshots/Try_Catch.png)
 
 
