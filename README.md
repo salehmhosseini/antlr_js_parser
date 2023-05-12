@@ -33,7 +33,6 @@
   - while
   - do - while
   ---
-  ---
   ### some explanation
   We have two separate files . (lexer and parser) so that lexer file linked to parser file.
   this program should start with at least an import statement . <br>
@@ -71,4 +70,25 @@
         | comment_statement
         | logical_expression
         ;
+---
+---
+## some screenshots from structured trees
+
+**Class Statement**
+![Class](https://github.com/salehmhosseini/university_antlr_project/blob/main/screenshots/Class.png)
+---
+
+**If Statement**
+![If](https://github.com/salehmhosseini/university_antlr_project/blob/main/screenshots/If.png)
+---
+
+**Try - Catch Statement**
+![Try_Catch](https://github.com/salehmhosseini/university_antlr_project/blob/main/screenshots/Try_Catch.png)
+
+
+
+
+
+
+
 
