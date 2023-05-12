@@ -1,0 +1,17 @@
+$import 'test' ;
+
+//normal_for
+for(int aaa=20;abc>=10 ; abc++){
+    abc+=10;
+    def = 'temp';
+}
+
+//for_in
+for(i in name_list){
+    aa +=1;
+}
+
+//for_of
+for(j of name_list){
+    aa +=1;
+}

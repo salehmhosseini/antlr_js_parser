@@ -1,0 +1,12 @@
+$import 'test' ;
+
+//while_loop
+while(s<=20 || b!=20){
+    abc +=10;
+}
+
+//Do - While loop
+do{
+    abc +=10;
+}
+while(abc!=2);

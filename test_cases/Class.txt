@@ -1,0 +1,10 @@
+$import 'test';
+
+//Class
+class Saleh{
+
+    constructor(aaa , bbb){
+    aaa=20;
+    bbb = 30;
+    }
+}

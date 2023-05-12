@@ -1,0 +1,13 @@
+$import 'test';
+
+// try - catch
+
+try{
+    abc=20;
+}
+catch(Stack_trace_Exception){
+    abc=0;
+}
+finally{
+    tmp=20;
+}

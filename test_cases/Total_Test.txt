@@ -1,0 +1,106 @@
+$import 'test';
+
+$let Saleh;
+$let abc = 33;
+
+$var xy , wz = 7.133e-9 , 8;
+$let Saleh , Mhosseini;
+
+$const aaa = 2 + 33;
+
+
+if(aaa>20){
+    aaa=10;
+}
+elif (aaa <20 && aaa>14){
+    aaa = 15;
+}
+else{
+    aaa=5;
+}
+
+
+
+class Saleh{
+
+    constructor(aaa , bbb){
+    aaa=20;
+    bbb = 30;
+    }
+}
+
+
+// this is single line comment
+
+/* this
+is
+multi
+line
+comment */
+
+
+
+for(int aaa=20;abc>=10 ; abc++){
+    abc+=10;
+    def = 'temp';
+}
+
+for(i in name_list){
+    aa +=1;
+}
+
+for(j of name_list){
+    aa +=1;
+}
+
+
+function Saleh_Mhosseini(int abc , float def){
+    abc=20;
+    def = 30
+    return abc;
+}
+
+$import 'test';
+
+switch Saleh{
+
+    case 20:
+        Saleh = 'Mhosseini20';
+        break;
+
+    case 22:
+        Saleh = 'Mhosseini22';
+        break;
+
+    default:
+        Saleh = 'Mhosseini;
+    }
+
+
+
+try{
+    abc=20;
+}
+catch(Stack_trace_Exception){
+    abc=0;
+}
+finally{
+    tmp=20;
+}
+
+
+
+while(s<=20 || b!=20){
+    abc +=10;
+}
+
+do{
+    abc +=10;
+}
+while(abc!=2);
+
+
+
+
+
+

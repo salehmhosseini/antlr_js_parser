@@ -1,0 +1,13 @@
+$import 'test';
+
+//if statement
+
+if(aaa>20){
+    aaa=10;
+}
+elif (aaa <20 && aaa>14){
+    aaa = 15;
+}
+else{
+    aaa=5;
+}

@@ -1,0 +1,11 @@
+$import 'test';
+
+// single_declaration
+$let Saleh;
+$let abc = 33;
+
+// multi_declaratuon
+$var xy , wz = 7.133e-9 , 8;
+$let Saleh , Mhosseini;
+
+$const aaa = 2 + 33;

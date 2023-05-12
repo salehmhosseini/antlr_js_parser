@@ -1,0 +1,14 @@
+//import_default
+$import 'test';
+
+//import_from
+$import defaultExport from "test";
+
+//import_all
+$import * as testi from "test";
+
+//import_multiple_named
+$import name_1 , name_2 from "test";
+
+//import_alias
+$import 'test' as tes;

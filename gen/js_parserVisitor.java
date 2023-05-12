@@ -3,244 +3,310 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
  * This interface defines a complete generic visitor for a parse tree produced
- * by {@link js_parserParser}.
+ * by {@link js_parser}.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
  * operations with no return type.
  */
 public interface js_parserVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#program}.
+	 * Visit a parse tree produced by {@link js_parser#program}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitProgram(js_parserParser.ProgramContext ctx);
+	T visitProgram(js_parser.ProgramContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#sourceElements}.
+	 * Visit a parse tree produced by {@link js_parser#sourceElements}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSourceElements(js_parserParser.SourceElementsContext ctx);
+	T visitSourceElements(js_parser.SourceElementsContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#statement}.
+	 * Visit a parse tree produced by {@link js_parser#statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitStatement(js_parserParser.StatementContext ctx);
+	T visitStatement(js_parser.StatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#statements}.
+	 * Visit a parse tree produced by {@link js_parser#statements}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitStatements(js_parserParser.StatementsContext ctx);
+	T visitStatements(js_parser.StatementsContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#import_statement}.
+	 * Visit a parse tree produced by {@link js_parser#import_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitImport_statement(js_parserParser.Import_statementContext ctx);
+	T visitImport_statement(js_parser.Import_statementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#import_content}.
+	 * Visit a parse tree produced by {@link js_parser#import_content}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitImport_content(js_parserParser.Import_contentContext ctx);
+	T visitImport_content(js_parser.Import_contentContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#import_default}.
+	 * Visit a parse tree produced by {@link js_parser#import_default}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitImport_default(js_parserParser.Import_defaultContext ctx);
+	T visitImport_default(js_parser.Import_defaultContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#import_from}.
+	 * Visit a parse tree produced by {@link js_parser#import_from}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitImport_from(js_parserParser.Import_fromContext ctx);
+	T visitImport_from(js_parser.Import_fromContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#import_all}.
+	 * Visit a parse tree produced by {@link js_parser#import_all}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitImport_all(js_parserParser.Import_allContext ctx);
+	T visitImport_all(js_parser.Import_allContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#import_multiple_named}.
+	 * Visit a parse tree produced by {@link js_parser#import_multiple_named}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitImport_multiple_named(js_parserParser.Import_multiple_namedContext ctx);
+	T visitImport_multiple_named(js_parser.Import_multiple_namedContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#import_alias}.
+	 * Visit a parse tree produced by {@link js_parser#import_alias}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitImport_alias(js_parserParser.Import_aliasContext ctx);
+	T visitImport_alias(js_parser.Import_aliasContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#variable_declaration}.
+	 * Visit a parse tree produced by {@link js_parser#variable_declaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVariable_declaration(js_parserParser.Variable_declarationContext ctx);
+	T visitVariable_declaration(js_parser.Variable_declarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#variable_type}.
+	 * Visit a parse tree produced by {@link js_parser#variable_type}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitVariable_type(js_parserParser.Variable_typeContext ctx);
+	T visitVariable_type(js_parser.Variable_typeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#single_declaration}.
+	 * Visit a parse tree produced by {@link js_parser#single_declaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSingle_declaration(js_parserParser.Single_declarationContext ctx);
+	T visitSingle_declaration(js_parser.Single_declarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#single_decl_with_type}.
+	 * Visit a parse tree produced by {@link js_parser#single_decl_with_type}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSingle_decl_with_type(js_parserParser.Single_decl_with_typeContext ctx);
+	T visitSingle_decl_with_type(js_parser.Single_decl_with_typeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#single_decl_with_init}.
+	 * Visit a parse tree produced by {@link js_parser#single_decl_with_init}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSingle_decl_with_init(js_parserParser.Single_decl_with_initContext ctx);
+	T visitSingle_decl_with_init(js_parser.Single_decl_with_initContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#single_expression}.
+	 * Visit a parse tree produced by {@link js_parser#single_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitSingle_expression(js_parserParser.Single_expressionContext ctx);
+	T visitSingle_expression(js_parser.Single_expressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#multi_declaratuon}.
+	 * Visit a parse tree produced by {@link js_parser#multi_declaratuon}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMulti_declaratuon(js_parserParser.Multi_declaratuonContext ctx);
+	T visitMulti_declaratuon(js_parser.Multi_declaratuonContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#multi_decl_with_type}.
+	 * Visit a parse tree produced by {@link js_parser#multi_decl_with_type}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMulti_decl_with_type(js_parserParser.Multi_decl_with_typeContext ctx);
+	T visitMulti_decl_with_type(js_parser.Multi_decl_with_typeContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#multi_decl_with_init}.
+	 * Visit a parse tree produced by {@link js_parser#multi_decl_with_init}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMulti_decl_with_init(js_parserParser.Multi_decl_with_initContext ctx);
+	T visitMulti_decl_with_init(js_parser.Multi_decl_with_initContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#multi_expression}.
+	 * Visit a parse tree produced by {@link js_parser#multi_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMulti_expression(js_parserParser.Multi_expressionContext ctx);
+	T visitMulti_expression(js_parser.Multi_expressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#for_loop}.
+	 * Visit a parse tree produced by {@link js_parser#for_loop}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFor_loop(js_parserParser.For_loopContext ctx);
+	T visitFor_loop(js_parser.For_loopContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#normal_for}.
+	 * Visit a parse tree produced by {@link js_parser#normal_for}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitNormal_for(js_parserParser.Normal_forContext ctx);
+	T visitNormal_for(js_parser.Normal_forContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#condition}.
+	 * Visit a parse tree produced by {@link js_parser#condition}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCondition(js_parserParser.ConditionContext ctx);
+	T visitCondition(js_parser.ConditionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#for_update}.
+	 * Visit a parse tree produced by {@link js_parser#for_update}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFor_update(js_parserParser.For_updateContext ctx);
+	T visitFor_update(js_parser.For_updateContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#loop_block}.
+	 * Visit a parse tree produced by {@link js_parser#loop_block}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLoop_block(js_parserParser.Loop_blockContext ctx);
+	T visitLoop_block(js_parser.Loop_blockContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#for_in}.
+	 * Visit a parse tree produced by {@link js_parser#for_in}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFor_in(js_parserParser.For_inContext ctx);
+	T visitFor_in(js_parser.For_inContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#for_of}.
+	 * Visit a parse tree produced by {@link js_parser#for_of}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitFor_of(js_parserParser.For_ofContext ctx);
+	T visitFor_of(js_parser.For_ofContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#while_loop}.
+	 * Visit a parse tree produced by {@link js_parser#while_loop}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitWhile_loop(js_parserParser.While_loopContext ctx);
+	T visitWhile_loop(js_parser.While_loopContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#do_while_loop}.
+	 * Visit a parse tree produced by {@link js_parser#do_while_loop}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitDo_while_loop(js_parserParser.Do_while_loopContext ctx);
+	T visitDo_while_loop(js_parser.Do_while_loopContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#do_statement}.
+	 * Visit a parse tree produced by {@link js_parser#do_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitDo_statement(js_parserParser.Do_statementContext ctx);
+	T visitDo_statement(js_parser.Do_statementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#while_statement}.
+	 * Visit a parse tree produced by {@link js_parser#while_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitWhile_statement(js_parserParser.While_statementContext ctx);
+	T visitWhile_statement(js_parser.While_statementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#if_statement}.
+	 * Visit a parse tree produced by {@link js_parser#if_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIf_statement(js_parserParser.If_statementContext ctx);
+	T visitIf_statement(js_parser.If_statementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#if_expression}.
+	 * Visit a parse tree produced by {@link js_parser#if_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIf_expression(js_parserParser.If_expressionContext ctx);
+	T visitIf_expression(js_parser.If_expressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#if_block}.
+	 * Visit a parse tree produced by {@link js_parser#if_block}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitIf_block(js_parserParser.If_blockContext ctx);
+	T visitIf_block(js_parser.If_blockContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#elif_expression}.
+	 * Visit a parse tree produced by {@link js_parser#elif_expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitElif_expression(js_parserParser.Elif_expressionContext ctx);
+	T visitElif_expression(js_parser.Elif_expressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#else_statement}.
+	 * Visit a parse tree produced by {@link js_parser#else_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitElse_statement(js_parserParser.Else_statementContext ctx);
+	T visitElse_statement(js_parser.Else_statementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#modern_if_statement}.
+	 * Visit a parse tree produced by {@link js_parser#modern_if_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitModern_if_statement(js_parserParser.Modern_if_statementContext ctx);
+	T visitModern_if_statement(js_parser.Modern_if_statementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link js_parserParser#assignments}.
+	 * Visit a parse tree produced by {@link js_parser#switch_case_statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitAssignments(js_parserParser.AssignmentsContext ctx);
+	T visitSwitch_case_statement(js_parser.Switch_case_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#case_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCase_statement(js_parser.Case_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#default_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDefault_statement(js_parser.Default_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#assignments}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssignments(js_parser.AssignmentsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#class_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitClass_statement(js_parser.Class_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#constructor}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitConstructor(js_parser.ConstructorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#function_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunction_statement(js_parser.Function_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#exception_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitException_statement(js_parser.Exception_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#try_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTry_statement(js_parser.Try_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#catch_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCatch_statement(js_parser.Catch_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#finally_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFinally_statement(js_parser.Finally_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parser#comment_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitComment_statement(js_parser.Comment_statementContext ctx);
 }

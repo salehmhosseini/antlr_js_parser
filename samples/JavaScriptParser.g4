@@ -34,7 +34,7 @@ parser grammar JavaScriptParser;
 
 options {
     tokenVocab=JavaScriptLexer;
-    superClass=JavaScriptParserBase;
+    superClass=JavaScriptP  ParserBase;
 }
 
 program

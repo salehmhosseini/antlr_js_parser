@@ -1,0 +1,8 @@
+$import 'test';
+
+//Function
+function Saleh_Mhosseini(int abc , float def){
+    abc=20;
+    def = 30
+    return abc;
+}
