@@ -1,0 +1,11 @@
+OPEN_PAREN=1
+CLOSE_PAREN=2
+IDENTIFIER=3
+INTEGER=4
+WS=5
+LogicalOperator=6
+AdditiveOperator=7
+MultiplicativeOperator=8
+UnaryOperator=9
+'('=1
+')'=2
