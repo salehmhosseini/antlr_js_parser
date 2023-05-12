@@ -36,8 +36,8 @@
   ---
   ### some explanation
   We have two separate files . (lexer and parser) so that lexer file linked to parser file.
-  this program should start with at least an import statement .
-  Inline `code`
+  this program should start with at least an import statement . <br>
+  start program `code`
 
       program
         : sourceElements EOF
@@ -52,5 +52,23 @@
       :
        import_statement+ statements*
       ;
-   
+   And any defined statements can come after that  <br>
+   `code`
+  
+        statements
+        :
+        variable_declaration
+        | for_loop
+        | while_loop
+        | do_while_loop
+        | if_statement
+        | modern_if_statement
+        | assignments
+        | switch_case_statement
+        | class_statement
+        | function_statement
+        | exception_statement
+        | comment_statement
+        | logical_expression
+        ;
 
