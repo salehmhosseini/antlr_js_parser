@@ -3,14 +3,11 @@ $import 'test';
 //switch case
 switch Saleh{
 
-    case 20:
-        Saleh = 'Mhosseini20';
-        break;
+case 20:
+    Saleh = 'Mhosseini20';
+    break;
 
-    case 22:
-        Saleh = 'Mhosseini22';
-        break;
 
-    default:
-        Saleh = 'Mhosseini;
-    }
+default:
+    Saleh = 'Mhosseini;
+}

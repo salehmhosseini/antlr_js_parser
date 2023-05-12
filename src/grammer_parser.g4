@@ -124,7 +124,7 @@ for_in :
   OpenParen (Char | Identifier) In Identifier CloseParen OpenBrace loop_block CloseBrace;
 
 for_of:
-  OpenParen (Char | Identifier) Of Identifier CloseParen OpenBrace  loop_block CloseParen CloseBrace;
+  OpenParen (Char | Identifier) Of Identifier CloseParen OpenBrace  loop_block  CloseBrace;
 
 //While
 while_loop :
