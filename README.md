@@ -32,5 +32,23 @@
 + While Loop Statement
   - while
   - do - while
-  
+  ---
+  ---
+  ### some explanation
+  We have two separate files . (lexer and parser) so that lexer file linked to parser file.
+  this program should start with at least an import statement .
+    program
+      : sourceElements EOF
+      ;
+
+    sourceElements
+    : statement
+    ;
+
+    // Start the program with import statement
+    statement
+    :
+     import_statement+ statements*
+    ;
+   
 
