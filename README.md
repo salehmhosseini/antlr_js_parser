@@ -71,7 +71,6 @@
         | logical_expression
         ;
 ---
----
 > ## some screenshots from structured trees
 
 **Class Statement**
@@ -82,7 +81,7 @@
 ![If](https://github.com/salehmhosseini/university_antlr_project/blob/main/screenshots/If.png)
 ---
 
-**Try-Catch Statement**
+**Exception Statement**
 ![Try_Catch](https://github.com/salehmhosseini/university_antlr_project/blob/main/screenshots/Try_Catch.png)
 
 
