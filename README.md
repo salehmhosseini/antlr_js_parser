@@ -33,7 +33,7 @@
   - while
   - do - while
   ---
-  ### some explanation
+  ### Some explanation
   We have two separate files . (lexer and parser) so that lexer file linked to parser file.
   this program should start with at least an import statement . <br>
   start program `code`
