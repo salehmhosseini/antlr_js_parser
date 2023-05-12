@@ -1,0 +1,14 @@
+T__0=1
+SemiColon=2
+DolorSign=3
+As=4
+From=5
+Identifier=6
+WS=7
+IMPORT_WS=8
+Dot=9
+'import'=1
+';'=2
+'$'=3
+'as'=4
+'from'=5
