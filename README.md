@@ -34,7 +34,7 @@
   - do - while
   ---
   ### Some explanation
-  We have two separate files . ([lexer](https://github.com/salehmhosseini/university_antlr_project/blob/main/src/grammer_lexer.g4/ "Lexer Code") and [parser](https://github.com/salehmhosseini/university_antlr_project/blob/main/src/grammer_parser.g4/ "Parser Code)) so that lexer file linked to parser file.
+  We have two separate files . ([lexer](https://github.com/salehmhosseini/university_antlr_project/blob/main/src/grammer_lexer.g4/ "Lexer Code") and [parser](https://github.com/salehmhosseini/university_antlr_project/blob/main/src/grammer_parser.g4/ "Parser Code")) so that lexer file linked to parser file.
   this program should start with at least an import statement . <br>
   start program `code`
 
