@@ -177,4 +177,70 @@ public interface js_parserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitFor_of(js_parserParser.For_ofContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#while_loop}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhile_loop(js_parserParser.While_loopContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#do_while_loop}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDo_while_loop(js_parserParser.Do_while_loopContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#do_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitDo_statement(js_parserParser.Do_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#while_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWhile_statement(js_parserParser.While_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#if_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIf_statement(js_parserParser.If_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#if_expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIf_expression(js_parserParser.If_expressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#if_block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIf_block(js_parserParser.If_blockContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#elif_expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElif_expression(js_parserParser.Elif_expressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#else_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElse_statement(js_parserParser.Else_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#modern_if_statement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitModern_if_statement(js_parserParser.Modern_if_statementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link js_parserParser#assignments}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssignments(js_parserParser.AssignmentsContext ctx);
 }

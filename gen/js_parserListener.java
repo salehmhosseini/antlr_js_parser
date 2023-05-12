@@ -286,4 +286,114 @@ public interface js_parserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFor_of(js_parserParser.For_ofContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#while_loop}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile_loop(js_parserParser.While_loopContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#while_loop}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile_loop(js_parserParser.While_loopContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#do_while_loop}.
+	 * @param ctx the parse tree
+	 */
+	void enterDo_while_loop(js_parserParser.Do_while_loopContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#do_while_loop}.
+	 * @param ctx the parse tree
+	 */
+	void exitDo_while_loop(js_parserParser.Do_while_loopContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#do_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterDo_statement(js_parserParser.Do_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#do_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitDo_statement(js_parserParser.Do_statementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#while_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterWhile_statement(js_parserParser.While_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#while_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitWhile_statement(js_parserParser.While_statementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#if_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterIf_statement(js_parserParser.If_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#if_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitIf_statement(js_parserParser.If_statementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#if_expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterIf_expression(js_parserParser.If_expressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#if_expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitIf_expression(js_parserParser.If_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#if_block}.
+	 * @param ctx the parse tree
+	 */
+	void enterIf_block(js_parserParser.If_blockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#if_block}.
+	 * @param ctx the parse tree
+	 */
+	void exitIf_block(js_parserParser.If_blockContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#elif_expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterElif_expression(js_parserParser.Elif_expressionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#elif_expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitElif_expression(js_parserParser.Elif_expressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#else_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterElse_statement(js_parserParser.Else_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#else_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitElse_statement(js_parserParser.Else_statementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#modern_if_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterModern_if_statement(js_parserParser.Modern_if_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#modern_if_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitModern_if_statement(js_parserParser.Modern_if_statementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link js_parserParser#assignments}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignments(js_parserParser.AssignmentsContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link js_parserParser#assignments}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignments(js_parserParser.AssignmentsContext ctx);
 }

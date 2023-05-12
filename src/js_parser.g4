@@ -12,6 +12,7 @@ RelationalOperator:              '<' | '>' | '<=' | '>=' | '==' | '!=' | '===' |
 //relational oprators
 Des_In_CreamentOprators:        '++' | '--' |;
 RelationalOprators :            '+=' | '-=' | '/=' | '*=' ;
+Assign:                         '=';
 
 //Import
 As:                             'as';
@@ -46,6 +47,7 @@ Do:                             'do';
 //Conditional
 If:                             'if';
 Else:                           'else';
+ElseIf:                         'elif';
 
 Switch:                         'switch';
 Match:                          'match';
@@ -58,6 +60,15 @@ Class:                          'class';
 Constructor:                    'constructor';
 This:                           'this';
 New:                            'new';
+Return:                         'return';
+QuestionMark:                   '?';
+Colon:                          ':';
+DataTypes:                      'int' | 'float' | 'double' | 'long' | 'short';
+Function_:                      'function';
+// Exception Handeling
+Try:                            'try';
+Catch:                          'catch';
+
 
 // Tokens
 //Identifier: [a-zA-Z]+ [a-zA-Z0-9_]*;
@@ -90,12 +101,21 @@ sourceElements
 
 statement
     :
-     import_statement+ statements
+     import_statement+ statements*
     ;
 statements
     :
     variable_declaration|
-    for_loop
+    for_loop|
+    while_loop|
+    do_while_loop|
+    if_statement|
+    modern_if_statement|
+    assignments|
+    switch_case_statement|
+    class_statement|
+    function_statement|
+    exception_statement
     ;
 // Parser rules
 
@@ -106,7 +126,8 @@ import_content: import_default
         | import_from
         | import_all
         | import_multiple_named
-        | import_alias;
+        | import_alias
+        ;
 
 import_default: StringLiteral SemiColon;
 
@@ -134,51 +155,76 @@ single_expression: Number |Identifier | Number (ComputeSigns+) Number;
  multi_expression : (Number Comma Number) |
                     (Identifier Comma Identifier) |
                     (Number (ComputeSigns+) Number ) Comma (Number (ComputeSigns+) Number ) ;
-// loops
+// Loops
 
-//for loop
+//For Loop
 for_loop :For (normal_for| for_in |for_of);
- normal_for :
- OpenParen variable_declaration Comma condition SemiColon for_update CloseParen OpenBrace loop_block CloseBrace ;
 
-condition:  Identifier RelationalOperator Number (LogicalOperator Identifier RelationalOperator Number )*;
-for_update:(Identifier Des_In_CreamentOprators)|(Identifier RelationalOprators Number);
-loop_block : Identifier;
-// Lexer rules for operators
+normal_for :
+    OpenParen variable_declaration Comma condition SemiColon for_update CloseParen OpenBrace loop_block CloseBrace ;
 
-
-
-//In this modified grammar, the loop_condition rule includes three expressions separated by semicolons. The first expression represents the loop condition, the second expression represents the increment/decrement operation, and the third expression is optional.
-//
-//Please note that this grammar assumes a C-like syntax where the loop condition and increment/decrement expressions are separated by semicolons. You can adjust the grammar as needed to match the syntax of your target language.
-//
-
+    condition:  Identifier RelationalOperator Number (LogicalOperator Identifier RelationalOperator Number )*;
+    for_update:(Identifier Des_In_CreamentOprators)|(Identifier RelationalOprators Number);
+    loop_block : statements;
 
 
 for_in :
- Char | Identifier In Identifier OpenBrace loop_block CloseBrace;
+  OpenParen (Char | Identifier) In Identifier CloseParen OpenBrace loop_block CloseBrace;
 
 for_of:
- Char | Identifier Of Identifier OpenBrace loop_block CloseBrace;
+  OpenParen (Char | Identifier) Of Identifier CloseParen OpenBrace  loop_block CloseParen CloseBrace;
+
+//While
+while_loop : While OpenParen condition CloseParen OpenBrace loop_block CloseBrace;
+
+//Do - While
+do_while_loop: do_statement while_statement ;
+do_statement : Do OpenBrace loop_block CloseBrace;
+while_statement : while_loop;
+
+// Conditions
+
+//If
+if_statement : if_expression (elif_expression (else_statement)? )? ;
+
+if_expression: If OpenParen condition CloseParen OpenBrace if_block CloseBrace;
+
+if_block : statements;
+
+elif_expression: ElseIf OpenParen condition CloseParen OpenBrace if_block CloseBrace;
+
+else_statement: Else OpenBrace if_block CloseBrace;
+
+//Modern If
+
+modern_if_statement: ((Return (Number|StringLiteral))| assignments) QuestionMark (StringLiteral | Number) Colon (StringLiteral | Number) SemiColon;
 
 
+// Switch - Case
+switch_case_statement: (Switch|Match) Identifier OpenBrace (case_statement)* default_statement CloseBrace;
+
+case_statement: Case (Number|StringLiteral) Colon statements Break SemiColon;
+
+default_statement: Default Colon statements Break SemiColon;
+
+// Assignment
+assignments: ((Identifier Assign StringLiteral) |(Identifier Assign Number)| (Identifier RelationalOprators Number) ) SemiColon;
+
+// Class Statement
+
+class_statement: Class Identifier  OpenBrace constructor CloseBrace ;
+
+constructor: Constructor  OpenParen(Identifier ( Comma Identifier)*)CloseParen OpenBrace statements CloseBrace;
+
+// function statement
+function_statement: Function_ Identifier OpenParen (DataTypes Identifier (Comma DataTypes Identifier)*)CloseParen OpenBrace statements Return Identifier SemiColon CloseBrace;
 
 
+// Exception Handeling
+exception_statement: try_statement (catch_statement)? finally_statement ;
 
+try_statement: Try OpenBrace statements CloseBrace ;
 
+catch_statement: Catch OpenParen Identifier CloseParen OpenBrace statements CloseBrace;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+finally_statement: Finally OpenBrace statements CloseBrace ;
