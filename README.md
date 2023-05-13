@@ -10,7 +10,7 @@
   - import_alias
 + Variable Decleration 
   - single_declaration
-  - multi_declaratuon
+  - multi_declaration
 + Class Statement
 + For Loop Statement
   - normal_for
